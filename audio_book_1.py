@@ -1,16 +1,16 @@
 """Audio book in python
 
 python version: 3.7.1
-author: ashraf minhaj
-mail: ashraf_minhaj@yahoo.com
+author: Jayesh
 """
 
 """import necessary libraries"""
+import sys                 # to get command line arguments
 import PyPDF2              #to extract text from pdf file
 import pyttsx3             #to convert text into speech
 
 #name of the file you want to read out (with path)
-file_name = "D:\\Audio Book\\sample.pdf"
+file_name = sys.argv[1]
 reading_speed = 100      #100 words per minute
 voice_id = 1             #1 -female voice, 0 -male voice
 
