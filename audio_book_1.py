@@ -11,6 +11,7 @@ import pyttsx3             #to convert text into speech
 
 #name of the file you want to read out (with path)
 file_name = sys.argv[1]
+page_no = int(sys.argv[2])
 reading_speed = 100      #100 words per minute
 voice_id = 1             #1 -female voice, 0 -male voice
 
@@ -22,7 +23,7 @@ pages_num = pdfReader.numPages              #get num of pages in our file
 
 print("Press CTRL+C to stop!")
 
-for num in range(pages_num):
+for num in range(page_no, pages_num):
     """This runs through all pages (one after another)"""
     pageObj = pdfReader.getPage(num)  #select a page by number (We count from 0, mind it)
     text = pageObj.extractText()      #get the text from our file
